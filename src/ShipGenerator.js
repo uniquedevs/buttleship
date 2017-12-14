@@ -54,6 +54,11 @@ class ShipGenerator {
     get ships(){
         return this._ships;
     }
+
+    empty() {
+        this._ships = [];
+        return this;
+    }
 }
 
 export const shipGenerator = new ShipGenerator();

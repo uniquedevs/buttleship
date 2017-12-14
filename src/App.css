@@ -1,15 +1,35 @@
 .App {
   position: relative;
   display: flex;
+  flex-direction: column;
 }
 
 .row {
-  
+  display: flex;
+  flex-direction: row;
 }
 
 .dot {
   width: 50px;
   height: 50px;
   border: 1px solid white;
+}
+
+.dot.empty {
   background: lightskyblue;
+}
+
+.dot.sink {
+  background: red;
+}
+
+.dot.missed {
+  background: blue;
+}
+
+input[type='button'] {
+  width: 100px;
+  height: 30px;
+  background: yellow;
+  outline: none;
 }

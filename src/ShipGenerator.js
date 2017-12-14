@@ -40,9 +40,10 @@ class ShipGenerator {
 
     collision(locations) {
         for (let i = 0; i < this._ships.length; i++) {
-            let ship = this._ships[i];
+            const ship = this._ships[i];
             for (let j = 0; j < locations.length; j++) {
-                if (ship.indexOf(locations[j]) >= 0) {
+                const location = locations[j];
+                if (ship.filter( ship_cell => ship_cell[0] === location[0] && ship_cell[1] === location[1]).length) {
                     return true;
                 }
             }
